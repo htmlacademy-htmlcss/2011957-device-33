@@ -48,6 +48,7 @@ body {
   color: var(--base-text-color);
 }
 
+/*Шапка*/
 .header-page {
   background-color: var(--special-color);
 }
@@ -96,19 +97,32 @@ body {
   font-weight: 700;
 }
 
+.open-catalog-list {
+  list-style: none;
+}
+
+.open-catalog-link {
+  color: var(--base-text-color);
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+/*Основной контент*/
 .main-index {
   background-color: var(--basic-color);
 }
 
-.slider-hidden {
+.visually-hidden {
   display: none;
 }
 
-.title-paragraph {
+.main-title {
   font-family: 'Raleway', 'sans-serif';
   font-size: 50px;
   line-height: 50px;
   font-weight: 800;
+  white-space: pre-line;
 }
 
 .title b {
@@ -119,6 +133,7 @@ body {
   white-space: pre-line;
 }
 
+/*Секция с галереей и слайдером*/
 .button {
   font-family: 'Raleway', 'sans-serif';
   color: var(--base-text-color);
@@ -138,6 +153,7 @@ body {
   font-weight: 400;
 }
 
+/*Секция с категориями продукции*/
 .categories-list {
   list-style: none;
 }
@@ -159,6 +175,7 @@ body {
   color: var(--base-text-color);
 }
 
+/*Секция с условиями продавца*/
 .main-terms {
   background-color: var(--basic-light-color);
 }
@@ -178,10 +195,8 @@ body {
 .seller-terms-deliver-link b {
   font-weight: 800;
 }
-.main-about-seller {
-  background-color: var(--basic-color);
-}
 
+/*Секция с информацией о продавце*/
 .about-seller-list {
   list-style: none;
 }
@@ -210,6 +225,7 @@ body {
   font-style: normal;
 }
 
+/*Секция с рассылкой*/
 .main-newsletter {
   background-color: var(--basic-light-color);
 }
@@ -221,6 +237,7 @@ body {
   font-weight: 400;
 }
 
+/*Подвал*/
 .footer-page {
   background-color: var(--footer-color);
   color: var(--white-text-color);
@@ -243,6 +260,7 @@ body {
   color: var(--white-text-color);
 }
 
+/*Шапка с хлебными крошками на странице: каталог*/
 .breadcrumbs-list .breadcrumbs-link{
   color: var(--base-text-color);
   font-size: 16px;
@@ -254,9 +272,9 @@ body {
   list-style: none;
 }
 
+/*Секция с фильтром и изображением продукции на странице: каталог */
 .catalog-list {
  background-color: var(--basic-light-color);
-
 }
 
 .catalog-title {
