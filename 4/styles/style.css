@@ -48,7 +48,8 @@ body {
   color: var(--base-text-color);
 }
 
-.header-index {
+/*Шапка*/
+.header-page {
   background-color: var(--special-color);
 }
 
@@ -61,21 +62,7 @@ body {
 }
 
 .navigation-search-input {
-  position: relative;
   background-color: var(--special-color);
-}
-
-.navigation-search-input::before {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  left: 0;
-  top: 0;
-  content: "";
-  background-image: url('../images/search-icon.svg');
-  background-repeat: no-repeat;
-  background-size: auto;
-  z-index: 5;
 }
 
 .navigation-user {
@@ -110,15 +97,32 @@ body {
   font-weight: 700;
 }
 
+.open-catalog-list {
+  list-style: none;
+}
+
+.open-catalog-link {
+  color: var(--base-text-color);
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+/*Основной контент*/
 .main-index {
   background-color: var(--basic-color);
 }
 
-.title {
+.visually-hidden {
+  display: none;
+}
+
+.main-title {
   font-family: 'Raleway', 'sans-serif';
   font-size: 50px;
   line-height: 50px;
   font-weight: 800;
+  white-space: pre-line;
 }
 
 .title b {
@@ -129,6 +133,7 @@ body {
   white-space: pre-line;
 }
 
+/*Секция с галереей и слайдером*/
 .button {
   font-family: 'Raleway', 'sans-serif';
   color: var(--base-text-color);
@@ -148,15 +153,16 @@ body {
   font-weight: 400;
 }
 
-.product-list {
+/*Секция с категориями продукции*/
+.categories-list {
   list-style: none;
 }
 
-.product-card-link {
+.categories-card-link {
   text-decoration: none;
 }
 
-.product-card-title {
+.categories-card-title {
   font-family: 'Raleway', 'sans-serif';
   font-size: 18px;
   line-height: 24px;
@@ -165,8 +171,17 @@ body {
   white-space: pre-line;
 }
 
+.categories-card-price {
+  color: var(--base-text-color);
+}
+
+/*Секция с условиями продавца*/
 .main-terms {
   background-color: var(--basic-light-color);
+}
+
+.seller-terms {
+  list-style: none;
 }
 
 .seller-terms-deliver-link {
@@ -180,8 +195,10 @@ body {
 .seller-terms-deliver-link b {
   font-weight: 800;
 }
-.main-about-seller {
-  background-color: var(--basic-color);
+
+/*Секция с информацией о продавце*/
+.about-seller-list {
+  list-style: none;
 }
 
 .about-seller-deliver {
@@ -194,6 +211,10 @@ body {
   font-weight: 700;
 }
 
+.contacts-schedule {
+  list-style: none;
+}
+
 .address {
   font-style: normal;
 }
@@ -204,6 +225,7 @@ body {
   font-style: normal;
 }
 
+/*Секция с рассылкой*/
 .main-newsletter {
   background-color: var(--basic-light-color);
 }
@@ -215,7 +237,8 @@ body {
   font-weight: 400;
 }
 
-.footer-index {
+/*Подвал*/
+.footer-page {
   background-color: var(--footer-color);
   color: var(--white-text-color);
 }
@@ -237,10 +260,7 @@ body {
   color: var(--white-text-color);
 }
 
-.header-inner {
-  background-color: var(--special-color);
-}
-
+/*Шапка с хлебными крошками на странице: каталог*/
 .breadcrumbs-list .breadcrumbs-link{
   color: var(--base-text-color);
   font-size: 16px;
@@ -252,9 +272,9 @@ body {
   list-style: none;
 }
 
+/*Секция с фильтром и изображением продукции на странице: каталог */
 .catalog-list {
  background-color: var(--basic-light-color);
-
 }
 
 .catalog-title {
@@ -317,7 +337,3 @@ body {
   text-decoration: none;
 }
 
-.footer-inner {
-  background-color: var(--footer-color);
-  color: var(--white-text-color);
-}
