@@ -39,7 +39,15 @@
   --white-text-color: #ffffff;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: 'Rubik', 'sans-serif';
   font-size: 18px;
   line-height: 30px;
@@ -50,7 +58,26 @@ body {
 
 /*Шапка*/
 .header-page {
+  background-color: var(--basic-color);
+}
+
+.navigation {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
   background-color: var(--special-color);
+}
+
+.header-container-left {
+  width: 580px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container-right {
+  width: 580px;
+  display: flex;
+  flex-direction: column;
 }
 
 .navigation-search .navigation-search-item {
@@ -65,7 +92,10 @@ body {
   background-color: var(--special-color);
 }
 
-.navigation-user {
+.navigation-user, .navigation-list {
+  /*display: flex;*/
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -82,7 +112,6 @@ body {
   color: var(--base-text-color);
   text-decoration: none;
   text-transform: uppercase;
-  list-style: none;
 }
 
 .navigation-list .navigation-link {
@@ -113,8 +142,19 @@ body {
   background-color: var(--basic-color);
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .main-title {
@@ -131,9 +171,30 @@ body {
 
 .description-inner {
   white-space: pre-line;
+  margin: 0;
 }
 
 /*Секция с галереей и слайдером*/
+.gallery-container {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.slider-button {
+  height: 60px;
+}
+
+.slider-prev {
+  order: -1;
+}
+
+.gallery-container-inner {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+
 .button {
   font-family: 'Raleway', 'sans-serif';
   color: var(--base-text-color);
@@ -153,13 +214,41 @@ body {
   font-weight: 400;
 }
 
+.description-pagination {
+  margin: 0;
+  padding: 0;
+}
+
+.main-title {
+  margin: 0;
+}
+
 /*Секция с категориями продукции*/
+.categories-container .categories-list {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .categories-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.categories-card:not(:last-child) {
+  width: 160px;
+  height: 253px;
+  margin-right: 40px;
 }
 
 .categories-card-link {
   text-decoration: none;
+}
+
+.categories-card-image {
+  display: block;
+  margin: 0 auto;
 }
 
 .categories-card-title {
@@ -180,8 +269,26 @@ body {
   background-color: var(--basic-light-color);
 }
 
+.terms-containers {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+  margin-bottom: 142px;
+  background-color: var(--basic-light-color);
+}
+
 .seller-terms {
+  width: 280px;
+  margin: 0;
+  margin-right: 116px;
+  padding: 0;
   list-style: none;
+}
+
+.seller-terms-deliver {
+  width: 1160px;
+  margin: 0 auto;
+  background-color: var(--basic-light-color);
 }
 
 .seller-terms-deliver-link {
@@ -193,10 +300,32 @@ body {
 }
 
 .seller-terms-deliver-link b {
+  display: block;
   font-weight: 800;
+  height: 100px;
+  width: 910px;
+  margin: 0 auto;
+  text-align: center;
+  /*letter-spacing: 5px;*/
 }
 
 /*Секция с информацией о продавце*/
+.about-seller-container {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.about-us-container{
+  width: 520px;
+  margin-right: auto;
+}
+
+.contacts-container {
+  width: 532px;
+}
+
 .about-seller-list {
   list-style: none;
 }
@@ -230,6 +359,31 @@ body {
   background-color: var(--basic-light-color);
 }
 
+.subscription-container {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+  justify-content: space-between;
+  /*margin-bottom: 144px;*/
+}
+
+.newsletter-container {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.newsletter-form {
+  width: 810px;
+  margin-right: auto;
+}
+
+.subscription-title {
+  width: 348px;
+  margin-left: 7px;
+  margin-right: auto;
+}
+
 .newsletter-email {
   font-family: 'Rubik', 'sans-serif';
   font-size: 18px;
@@ -237,10 +391,40 @@ body {
   font-weight: 400;
 }
 
+.description-inner-free {
+  width: 160px;
+  text-align: right;
+}
+
+.subscription-newsletter {
+  width: 560px;
+}
+
 /*Подвал*/
 .footer-page {
   background-color: var(--footer-color);
   color: var(--white-text-color);
+}
+
+.footer-page-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.footer-address {
+  width: 250px;
+  margin-right: 100px;
+}
+
+.footer-social {
+  width: 500px;
+  margin-right: auto;
+}
+
+.footer-contacts {
+  max-width: 190px;
 }
 
 .footer-address-text {
@@ -261,6 +445,11 @@ body {
 }
 
 /*Шапка с хлебными крошками на странице: каталог*/
+.breadcrumbs-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .breadcrumbs-list .breadcrumbs-link{
   color: var(--base-text-color);
   font-size: 16px;
@@ -273,8 +462,20 @@ body {
 }
 
 /*Секция с фильтром и изображением продукции на странице: каталог */
+.catalog-product {
+  background-color: var(--basic-light-color);
+}
+
+.product-container {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .catalog-list {
- background-color: var(--basic-light-color);
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .catalog-title {
@@ -294,7 +495,35 @@ body {
 }
 
 .catalog-filter {
+  width: 320px;
   background-color: var(--basic-light-color);
+}
+
+.catalog-right-column {
+  width: 840px;
+}
+
+
+.catalog-right-column .lineup-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lineup-card-link {
+  text-decoration: none;
+}
+
+.lineup-card-title {
+  color: var(--base-text-color);
+  font-weight: 700;
+  line-height: 20px;
+  margin: 0;
+}
+
+.lineup-card-price {
+  color: var(--base-text-color);
+  line-height: 21px;
 }
 
 .catalog-filter-title {
